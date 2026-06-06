@@ -53,15 +53,18 @@ def section_handler(section,f):
     elif section == 'DELTA':
         transition = strip_comment(f.readline())       # Reads the transition string
         while transition != '\\':               # Checks if the section has ended
-            transition = transition.split('{')  # Splits the transition string into two for the next steps
+            if transition:
+                transition = transition.split('{')  # Splits the transition string into two for the next steps
 
-            state, symbol = transition[0].strip('()').split(',')        # Extracts the state and symbol from the first half
-            value = transition[1].replace('return','').strip()[:-1:1]   # Extracts the return value from the second half
+                state, symbol = transition[0].strip('()').split(',')        # Extracts the state and symbol from the first half
+                state = state.strip()
+                symbol = symbol.strip()
+                value = transition[1].replace('return','').strip()[:-1:1]   # Extracts the return value from the second half
 
-            if state not in transitions:
-                transitions[state] = {}             # Builds a dictionary for every state
+                if state not in transitions:
+                    transitions[state] = {}             # Builds a dictionary for every state
 
-            transitions[state][symbol] = value      # Assigns return value for the transition
+                transitions[state][symbol] = value      # Assigns return value for the transition
 
             transition = strip_comment(f.readline())       # Reads the next transition string
         sections["DELTA"] = transitions
