@@ -1,3 +1,5 @@
+# Accepts strings of format 0^n 1^n
+
 /
 SIGMA
 0
