@@ -9,7 +9,7 @@ D
 \
 
 /
-STATES
+STATES   # NP = without potion in inventory | WP = with potion in inventory
 start
 hallwayNP
 hallwayWP
