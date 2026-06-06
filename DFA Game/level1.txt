@@ -1,0 +1,57 @@
+/
+SIGMA
+N
+S
+E
+W
+\
+
+/
+STATES
+start
+hallway
+kitchen
+library
+dining
+garden
+heaven
+\
+
+/
+FINAL
+heaven
+\
+
+/
+DELTA
+(start, W){return hallway}
+(start, S){return start}
+(start, N){return start}
+(start, E){return start}
+(hallway, W){return library}
+(hallway, N){return kitchen}
+(hallway, E){return start}
+(hallway, S){return hallway}
+(kitchen, W){return dining}
+(kitchen, S){return hallway}
+(kitchen, E){return kitchen}
+(kitchen, N){return kitchen}
+(dining, W){return garden}
+(dining, E){return kitchen}
+(dining, N){return dining}
+(dining, S){return dining}
+(garden, S){return heaven}
+(garden, E){return dining}
+(garden, N){return garden}
+(garden, W){return garden}
+(library, E){return hallway}
+(library, S){return library}
+(library, N){return library}
+(library, W){return library}
+\
+
+/
+START
+start
+\
+END

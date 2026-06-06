@@ -1,0 +1,104 @@
+/
+SIGMA
+N
+S
+E
+W
+P
+D
+\
+
+/
+STATES
+start
+hallwayNP
+hallwayWP
+kitchenNP
+kitchenWP
+libraryNP
+libraryWP
+diningNP
+diningWP
+gardenNP
+gardenWP
+heaven
+hell
+\
+
+/
+FINAL
+heaven
+hell
+\
+
+/
+DELTA
+(start, W){return hallwayNP}
+(start, S){return start}
+(start, N){return start}
+(start, E){return start}
+(start, P){return start}
+(start, D){return start}
+(hallwayNP, W){return libraryNP}
+(hallwayNP, N){return kitchenNP}
+(hallwayNP, E){return start}
+(hallwayNP, S){return hallwayNP}
+(hallwayWP, W){return libraryWP}
+(hallwayWP, N){return kitchenWP}
+(hallwayWP, E){return start}
+(hallwayWP, S){return hallwayWP}
+(hallwayWP, P){return hallwayWP}
+(hallwayWP, D){return hallwayNP}
+(kitchenNP, W){return diningNP}
+(kitchenNP, S){return hallwayNP}
+(kitchenNP, E){return kitchenNP}
+(kitchenNP, N){return kitchenNP}
+(kitchenNP, P){return kitchenNP}
+(kitchenNP, D){return kitchenNP}
+(kitchenWP, W){return diningWP}
+(kitchenWP, S){return hallwayWP}
+(kitchenWP, E){return kitchenWP}
+(kitchenWP, N){return kitchenWP}
+(kitchenWP, P){return kitchenWP}
+(kitchenWP, D){return kitchenNP}
+(diningNP, W){return gardenNP}
+(diningNP, E){return kitchenNP}
+(diningNP, N){return diningNP}
+(diningNP, S){return diningNP}
+(diningNP, P){return diningNP}
+(diningNP, D){return diningNP}
+(diningWP, W){return gardenWP}
+(diningWP, E){return kitchenWP}
+(diningWP, N){return diningWP}
+(diningWP, S){return diningWP}
+(diningWP, P){return diningWP}
+(diningWP, D){return diningNP}
+(gardenNP, S){return hell}
+(gardenNP, E){return diningNP}
+(gardenNP, N){return gardenNP}
+(gardenNP, W){return gardenNP}
+(gardenNP, P){return gardenNP}
+(gardenNP, D){return gardenNP}
+(gardenWP, S){return heaven}
+(gardenWP, E){return diningWP}
+(gardenWP, N){return gardenWP}
+(gardenWP, W){return gardenWP}
+(gardenWP, P){return gardenWP}
+(gardenWP, D){return gardenNP}
+(libraryNP, E){return hallway}
+(libraryNP, S){return library}
+(libraryNP, N){return library}
+(libraryNP, W){return library}
+(libraryNP, P){return libraryWP}
+(libraryWP, D){return libraryNP}
+(libraryWP, E){return hallwayWP}
+(libraryWP, S){return libraryWP}
+(libraryWP, N){return libraryWP}
+(libraryWP, W){return libraryWP}
+\
+
+/
+START
+start
+\
+END

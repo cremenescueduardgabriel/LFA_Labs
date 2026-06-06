@@ -1,0 +1,366 @@
+/
+SIGMA
+N
+S
+E
+W
+P
+D
+\
+
+/
+STATES
+st_st
+st_hw
+st_kc
+st_dn
+st_gd
+st_lb
+st_wp
+hw_st
+hw_hw
+hw_kc
+hw_dn
+hw_gd
+hw_lb
+hw_wp
+kc_st
+kc_hw
+kc_kc
+kc_dn
+kc_gd
+kc_lb
+kc_wp
+dn_st
+dn_hw
+dn_kc
+dn_dn
+dn_gd
+dn_lb
+dn_wp
+gd_st
+gd_hw
+gd_kc
+gd_dn
+gd_gd
+gd_lb
+gd_wp
+lb_st
+lb_hw
+lb_kc
+lb_dn
+lb_gd
+lb_lb
+lb_wp
+heaven
+hell
+\
+
+/
+FINAL
+heaven
+hell
+\
+
+/
+DELTA
+(st_st, W){return hw_st}
+(st_st, S){return st_st}
+(st_st, N){return st_st}
+(st_st, E){return st_st}
+(st_st, P){return st_wp}
+(st_st, D){return st_st}
+
+(st_hw, W){return hw_hw}
+(st_hw, S){return st_hw}
+(st_hw, N){return st_hw}
+(st_hw, E){return st_hw}
+(st_hw, P){return st_hw}
+(st_hw, D){return st_hw}
+
+(st_kc, W){return hw_kc}
+(st_kc, S){return st_kc}
+(st_kc, N){return st_kc}
+(st_kc, E){return st_kc}
+(st_kc, P){return st_kc}
+(st_kc, D){return st_kc}
+
+(st_dn, W){return hw_dn}
+(st_dn, S){return st_dn}
+(st_dn, N){return st_dn}
+(st_dn, E){return st_dn}
+(st_dn, P){return st_dn}
+(st_dn, D){return st_dn}
+
+(st_gd, W){return hw_gd}
+(st_gd, S){return st_gd}
+(st_gd, N){return st_gd}
+(st_gd, E){return st_gd}
+(st_gd, P){return st_gd}
+(st_gd, D){return st_gd}
+
+(st_lb, W){return hw_lb}
+(st_lb, S){return st_lb}
+(st_lb, N){return st_lb}
+(st_lb, E){return st_lb}
+(st_lb, P){return st_lb}
+(st_lb, D){return st_lb}
+
+(st_wp, W){return hw_wp}
+(st_wp, S){return st_wp}
+(st_wp, N){return st_wp}
+(st_wp, E){return st_wp}
+(st_wp, P){return st_wp}
+(st_wp, D){return st_st}
+
+(hw_st, W){return lb_st}
+(hw_st, N){return kc_st}
+(hw_st, E){return st_st}
+(hw_st, S){return hw_st}
+(hw_st, P){return hw_st}
+(hw_st, D){return hw_st}
+
+(hw_hw, W){return lb_hw}
+(hw_hw, N){return kc_hw}
+(hw_hw, E){return st_hw}
+(hw_hw, S){return hw_hw}
+(hw_hw, P){return hw_wp}
+(hw_hw, D){return hw_hw}
+
+(hw_kc, W){return lb_kc}
+(hw_kc, N){return kc_kc}
+(hw_kc, E){return st_kc}
+(hw_kc, S){return hw_kc}
+(hw_kc, P){return hw_kc}
+(hw_kc, D){return hw_kc}
+
+(hw_dn, W){return lb_dn}
+(hw_dn, N){return kc_dn}
+(hw_dn, E){return st_dn}
+(hw_dn, S){return hw_dn}
+(hw_dn, P){return hw_dn}
+(hw_dn, D){return hw_dn}
+
+(hw_gd, W){return lb_gd}
+(hw_gd, N){return kc_gd}
+(hw_gd, E){return st_gd}
+(hw_gd, S){return hw_gd}
+(hw_gd, P){return hw_gd}
+(hw_gd, D){return hw_gd}
+
+(hw_lb, W){return lb_lb}
+(hw_lb, N){return kc_lb}
+(hw_lb, E){return st_lb}
+(hw_lb, S){return hw_lb}
+(hw_lb, P){return hw_lb}
+(hw_lb, D){return hw_lb}
+
+(hw_wp, W){return lb_wp}
+(hw_wp, N){return kc_wp}
+(hw_wp, E){return st_wp}
+(hw_wp, S){return hw_wp}
+(hw_wp, P){return hw_wp}
+(hw_wp, D){return hw_hw}
+
+(kc_st, W){return dn_st}
+(kc_st, S){return hw_st}
+(kc_st, E){return kc_st}
+(kc_st, N){return kc_st}
+(kc_st, P){return kc_st}
+(kc_st, D){return kc_st}
+
+(kc_hw, W){return dn_hw}
+(kc_hw, S){return hw_hw}
+(kc_hw, E){return kc_hw}
+(kc_hw, N){return kc_hw}
+(kc_hw, P){return kc_hw}
+(kc_hw, D){return kc_hw}
+
+(kc_kc, W){return dn_kc}
+(kc_kc, S){return hw_kc}
+(kc_kc, E){return kc_kc}
+(kc_kc, N){return kc_kc}
+(kc_kc, P){return kc_wp}
+(kc_kc, D){return kc_kc}
+
+(kc_dn, W){return dn_dn}
+(kc_dn, S){return hw_dn}
+(kc_dn, E){return kc_dn}
+(kc_dn, N){return kc_dn}
+(kc_dn, P){return kc_dn}
+(kc_dn, D){return kc_dn}
+
+(kc_gd, W){return dn_gd}
+(kc_gd, S){return hw_gd}
+(kc_gd, E){return kc_gd}
+(kc_gd, N){return kc_gd}
+(kc_gd, P){return kc_gd}
+(kc_gd, D){return kc_gd}
+
+(kc_lb, W){return dn_lb}
+(kc_lb, S){return hw_lb}
+(kc_lb, E){return kc_lb}
+(kc_lb, N){return kc_lb}
+(kc_lb, P){return kc_lb}
+(kc_lb, D){return kc_lb}
+
+(kc_wp, W){return dn_wp}
+(kc_wp, S){return hw_wp}
+(kc_wp, E){return kc_wp}
+(kc_wp, N){return kc_wp}
+(kc_wp, P){return kc_wp}
+(kc_wp, D){return kc_kc}
+
+(dn_st, W){return gd_st}
+(dn_st, E){return kc_st}
+(dn_st, N){return dn_st}
+(dn_st, S){return dn_st}
+(dn_st, P){return dn_st}
+(dn_st, D){return dn_st}
+
+(dn_hw, W){return gd_hw}
+(dn_hw, E){return kc_hw}
+(dn_hw, N){return dn_hw}
+(dn_hw, S){return dn_hw}
+(dn_hw, P){return dn_hw}
+(dn_hw, D){return dn_hw}
+
+(dn_kc, W){return gd_kc}
+(dn_kc, E){return kc_kc}
+(dn_kc, N){return dn_kc}
+(dn_kc, S){return dn_kc}
+(dn_kc, P){return dn_kc}
+(dn_kc, D){return dn_kc}
+
+(dn_dn, W){return gd_dn}
+(dn_dn, E){return kc_dn}
+(dn_dn, N){return dn_dn}
+(dn_dn, S){return dn_dn}
+(dn_dn, P){return dn_wp}
+(dn_dn, D){return dn_dn}
+
+(dn_gd, W){return gd_gd}
+(dn_gd, E){return kc_gd}
+(dn_gd, N){return dn_gd}
+(dn_gd, S){return dn_gd}
+(dn_gd, P){return dn_gd}
+(dn_gd, D){return dn_gd}
+
+(dn_lb, W){return gd_lb}
+(dn_lb, E){return kc_lb}
+(dn_lb, N){return dn_lb}
+(dn_lb, S){return dn_lb}
+(dn_lb, P){return dn_lb}
+(dn_lb, D){return dn_lb}
+
+(dn_wp, W){return gd_wp}
+(dn_wp, E){return kc_wp}
+(dn_wp, N){return dn_wp}
+(dn_wp, S){return dn_wp}
+(dn_wp, P){return dn_wp}
+(dn_wp, D){return dn_dn}
+
+(gd_st, S){return hell}
+(gd_st, E){return dn_st}
+(gd_st, N){return gd_st}
+(gd_st, W){return gd_st}
+(gd_st, P){return gd_st}
+(gd_st, D){return gd_st}
+
+(gd_hw, S){return hell}
+(gd_hw, E){return dn_hw}
+(gd_hw, N){return gd_hw}
+(gd_hw, W){return gd_hw}
+(gd_hw, P){return gd_hw}
+(gd_hw, D){return gd_hw}
+
+(gd_kc, S){return hell}
+(gd_kc, E){return dn_kc}
+(gd_kc, N){return gd_kc}
+(gd_kc, W){return gd_kc}
+(gd_kc, P){return gd_kc}
+(gd_kc, D){return gd_kc}
+
+(gd_dn, S){return hell}
+(gd_dn, E){return dn_dn}
+(gd_dn, N){return gd_dn}
+(gd_dn, W){return gd_dn}
+(gd_dn, P){return gd_dn}
+(gd_dn, D){return gd_dn}
+
+(gd_gd, S){return hell}
+(gd_gd, E){return dn_gd}
+(gd_gd, N){return gd_gd}
+(gd_gd, W){return gd_gd}
+(gd_gd, P){return gd_wp}
+(gd_gd, D){return gd_gd}
+
+(gd_lb, S){return hell}
+(gd_lb, E){return dn_lb}
+(gd_lb, N){return gd_lb}
+(gd_lb, W){return gd_lb}
+(gd_lb, P){return gd_lb}
+(gd_lb, D){return gd_lb}
+
+(gd_wp, S){return heaven}
+(gd_wp, E){return dn_wp}
+(gd_wp, N){return gd_wp}
+(gd_wp, W){return gd_wp}
+(gd_wp, P){return gd_wp}
+(gd_wp, D){return gd_gd}
+
+(lb_st, E){return hw_st}
+(lb_st, S){return lb_st}
+(lb_st, N){return lb_st}
+(lb_st, W){return lb_st}
+(lb_st, P){return lb_st}
+(lb_st, D){return lb_st}
+
+(lb_hw, E){return hw_hw}
+(lb_hw, S){return lb_hw}
+(lb_hw, N){return lb_hw}
+(lb_hw, W){return lb_hw}
+(lb_hw, P){return lb_hw}
+(lb_hw, D){return lb_hw}
+
+(lb_kc, E){return hw_kc}
+(lb_kc, S){return lb_kc}
+(lb_kc, N){return lb_kc}
+(lb_kc, W){return lb_kc}
+(lb_kc, P){return lb_kc}
+(lb_kc, D){return lb_kc}
+
+(lb_dn, E){return hw_dn}
+(lb_dn, S){return lb_dn}
+(lb_dn, N){return lb_dn}
+(lb_dn, W){return lb_dn}
+(lb_dn, P){return lb_dn}
+(lb_dn, D){return lb_dn}
+
+(lb_gd, E){return hw_gd}
+(lb_gd, S){return lb_gd}
+(lb_gd, N){return lb_gd}
+(lb_gd, W){return lb_gd}
+(lb_gd, P){return lb_gd}
+(lb_gd, D){return lb_gd}
+
+(lb_lb, E){return hw_lb}
+(lb_lb, S){return lb_lb}
+(lb_lb, N){return lb_lb}
+(lb_lb, W){return lb_lb}
+(lb_lb, P){return lb_wp}
+(lb_lb, D){return lb_lb}
+
+(lb_wp, E){return hw_wp}
+(lb_wp, S){return lb_wp}
+(lb_wp, N){return lb_wp}
+(lb_wp, W){return lb_wp}
+(lb_wp, P){return lb_wp}
+(lb_wp, D){return lb_lb}
+\
+
+/
+START
+st_lb
+\
+END
