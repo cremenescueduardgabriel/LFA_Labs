@@ -1,0 +1,33 @@
+/
+SIGMA
+0
+1
+\
+
+/
+STATES
+q0
+q1
+q2
+\
+
+/
+FINAL
+q2
+\
+
+/
+DELTA
+(q0,0){return q0}
+(q0,1){return q1}
+(q1,0){return q0}
+(q1,1){return q2}
+(q2,0){return q0}
+(q2,1){return q2}
+\
+
+/
+START
+q0
+\
+END
