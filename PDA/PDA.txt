@@ -1,0 +1,45 @@
+/
+SIGMA
+0
+1
+\
+
+/
+GAMMA
+$
+0
+\
+
+/
+STATES
+q0
+q1
+q2
+q3
+q4
+\
+
+/
+FINAL
+q3
+\
+
+/
+DELTA
+(q0,e,e){return (q1,$)}
+(q1,0,e){return (q1,0)}
+(q1,1,0){return (q2,e)}
+(q1,1,$){return (q4,e)}
+(q1,e,$){return (q3,e)}
+(q2,1,0){return (q2,e)}
+(q2,e,$){return (q3,e)}
+(q2,0,e){return (q4,e)}
+(q4,0,e){return (q4,e)}
+(q4,1,e){return (q4,e)}
+\
+
+/
+START
+q0
+\
+END
