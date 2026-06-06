@@ -1,0 +1,43 @@
+# accepts strings where '1' is the second character
+
+/
+SIGMA
+e
+0
+1
+\
+
+/
+STATES
+q0
+q1
+q2
+q3
+q4
+\
+
+/
+FINAL
+q3
+q4
+\
+
+/
+DELTA
+(q0,0){return q1}
+(q0,1){return q2}
+(q1,1){return q3}
+(q1,0){return q1}
+(q2,1){return q4}
+(q2,0){return q1}
+(q3,0){return q3}
+(q3,1){return q3}
+(q4,0){return q3}
+(q4,1){return q4}
+\
+
+/
+START
+q0
+\
+END

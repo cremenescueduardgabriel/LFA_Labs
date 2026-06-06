@@ -1,0 +1,38 @@
+# accepts strings containing substrings 10 or 11
+
+/
+SIGMA
+e
+0
+1
+\
+
+/
+STATES
+q0
+q1
+q2
+q3
+\
+
+/
+FINAL
+q3
+\
+
+/
+DELTA
+(q0,0){return q0}
+(q0,1){return q0,q1}
+(q1,0){return q2}
+(q1,e){return q2}
+(q2,1){return q3}
+(q3,0){return q3}
+(q3,1){return q3}
+\
+
+/
+START
+q0
+\
+END
