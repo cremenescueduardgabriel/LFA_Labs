@@ -1,3 +1,5 @@
+# Accepts strings containing '111'
+
 /
 SIGMA
 0
