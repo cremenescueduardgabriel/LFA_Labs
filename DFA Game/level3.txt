@@ -9,7 +9,7 @@ D
 \
 
 /
-STATES
+STATES  # first room is the one you are in, second room is the one where the potion is in
 st_st
 st_hw
 st_kc
